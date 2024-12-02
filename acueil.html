@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <style>
+        /* Styles pour la navigation à gauche */
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .nav {
+            float: left;
+            width: 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            color: blue;
+            text-decoration: none;
+        }
+       .nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .nav li {
+            margin-bottom: 20px;
+        }
+        /* Styles pour les images à droite */
+        .slider-frame{
+      overflow: hidden;
+      height: 800px;
+      width: 1200px;
+      margin-left: 360px;
+      margin-top: 20px;
+      display: flex;
+  }
+   @keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+    0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+}
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 1200px;
+    height: 600px;
+    margin: 0 0 0 -1200px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+    animation: slide 2s infinite;
+    object-fit: cover;
+}
+</style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Commande</a></li>
+            <li><a href="#">Panier</a></li>
+            <li><a href="index.html">Retour</a></li>
+        </ul>
+    </div>
+    <div class="slider-frame">
+        <div class="slide-images">
+                <div class="img-container">
+                    <img src="panier.jpg">
+                </div>
+                <div class="img-container">
+                    <img src="paysage.jpg">
+                </div>
+                <div class="img-container">
+                    <img src="lac.jpg">
+                </div>
+        </div>
+    </div>
+</body>
+</html>
